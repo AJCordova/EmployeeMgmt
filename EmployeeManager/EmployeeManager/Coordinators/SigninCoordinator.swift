@@ -30,6 +30,7 @@ final class SigninCoordinator: SigninCoordinatorDelegate {
     }
     
     func goToCreateNewEmployerView() {
-        //
+        let coordinator = RegisterCoodinator(navigationController: navigationController)
+        coordinate(to: coordinator)
     }
 }

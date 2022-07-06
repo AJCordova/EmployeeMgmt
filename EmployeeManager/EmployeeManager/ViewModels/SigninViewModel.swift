@@ -49,7 +49,7 @@ class SigninViewModel: SigninViewModelInputs, SigninViewModelOutputs, SigninView
         //self.userManager = UserManagementService()
         
         emailDidChangeProperty
-            .map { $0.isValidName }
+            .map { $0.isValidEmail }
             .bind(to: isEmailValid)
             .disposed(by: disposeBag)
         
@@ -89,7 +89,7 @@ class SigninViewModel: SigninViewModelInputs, SigninViewModelOutputs, SigninView
         shouldProceedToEvents
             .filter { $0 == true }
             .bind(onNext: { _ in
-                // self.coordinator.goToEvents()
+                self.coordinator.goToEmployeeManagementView()
             })
             .disposed(by: disposeBag)
     }
@@ -103,10 +103,10 @@ class SigninViewModel: SigninViewModelInputs, SigninViewModelOutputs, SigninView
     }
     
     func signinEmployer(email name: String, password: String) {
-        print("Sign in tapped")
+        
     }
     
     func registerEmployer() {
-        print("Register tapped")
+        coordinator.goToCreateNewEmployerView()
     }
 }
