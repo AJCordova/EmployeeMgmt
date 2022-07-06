@@ -10,12 +10,15 @@
 		E1ECD4582875760400CD0253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4572875760400CD0253 /* AppDelegate.swift */; };
 		E1ECD45A2875760400CD0253 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4592875760400CD0253 /* SceneDelegate.swift */; };
 		E1ECD45C2875760400CD0253 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD45B2875760400CD0253 /* ViewController.swift */; };
-		E1ECD45F2875760400CD0253 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1ECD45D2875760400CD0253 /* Main.storyboard */; };
 		E1ECD4612875760600CD0253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1ECD4602875760600CD0253 /* Assets.xcassets */; };
 		E1ECD4642875760600CD0253 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1ECD4622875760600CD0253 /* LaunchScreen.storyboard */; };
 		E1ECD46F2875760600CD0253 /* EmployeeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD46E2875760600CD0253 /* EmployeeManagerTests.swift */; };
 		E1ECD4792875760600CD0253 /* EmployeeManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4782875760600CD0253 /* EmployeeManagerUITests.swift */; };
 		E1ECD47B2875760600CD0253 /* EmployeeManagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD47A2875760600CD0253 /* EmployeeManagerUITestsLaunchTests.swift */; };
+		E1ECD489287578CD00CD0253 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E1ECD488287578CD00CD0253 /* RxCocoa */; };
+		E1ECD48B287578CD00CD0253 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E1ECD48A287578CD00CD0253 /* RxSwift */; };
+		E1ECD48E2875794D00CD0253 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E1ECD48D2875794D00CD0253 /* SnapKit */; };
+		E1ECD49028757FD500CD0253 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD48F28757FD500CD0253 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,6 @@
 		E1ECD4572875760400CD0253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1ECD4592875760400CD0253 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E1ECD45B2875760400CD0253 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E1ECD45E2875760400CD0253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1ECD4602875760600CD0253 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1ECD4632875760600CD0253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1ECD4652875760600CD0253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 		E1ECD4742875760600CD0253 /* EmployeeManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeeManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1ECD4782875760600CD0253 /* EmployeeManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeManagerUITests.swift; sourceTree = "<group>"; };
 		E1ECD47A2875760600CD0253 /* EmployeeManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E1ECD48F28757FD500CD0253 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1ECD48E2875794D00CD0253 /* SnapKit in Frameworks */,
+				E1ECD48B287578CD00CD0253 /* RxSwift in Frameworks */,
+				E1ECD489287578CD00CD0253 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,10 +108,10 @@
 				E1ECD4572875760400CD0253 /* AppDelegate.swift */,
 				E1ECD4592875760400CD0253 /* SceneDelegate.swift */,
 				E1ECD45B2875760400CD0253 /* ViewController.swift */,
-				E1ECD45D2875760400CD0253 /* Main.storyboard */,
 				E1ECD4602875760600CD0253 /* Assets.xcassets */,
 				E1ECD4622875760600CD0253 /* LaunchScreen.storyboard */,
 				E1ECD4652875760600CD0253 /* Info.plist */,
+				E1ECD48F28757FD500CD0253 /* AppCoordinator.swift */,
 			);
 			path = EmployeeManager;
 			sourceTree = "<group>";
@@ -143,6 +149,11 @@
 			dependencies = (
 			);
 			name = EmployeeManager;
+			packageProductDependencies = (
+				E1ECD488287578CD00CD0253 /* RxCocoa */,
+				E1ECD48A287578CD00CD0253 /* RxSwift */,
+				E1ECD48D2875794D00CD0253 /* SnapKit */,
+			);
 			productName = EmployeeManager;
 			productReference = E1ECD4542875760400CD0253 /* EmployeeManager.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,10 @@
 				Base,
 			);
 			mainGroup = E1ECD44B2875760400CD0253;
+			packageReferences = (
+				E1ECD487287578CD00CD0253 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				E1ECD48C2875794D00CD0253 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = E1ECD4552875760400CD0253 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +248,6 @@
 			files = (
 				E1ECD4642875760600CD0253 /* LaunchScreen.storyboard in Resources */,
 				E1ECD4612875760600CD0253 /* Assets.xcassets in Resources */,
-				E1ECD45F2875760400CD0253 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1ECD49028757FD500CD0253 /* AppCoordinator.swift in Sources */,
 				E1ECD45C2875760400CD0253 /* ViewController.swift in Sources */,
 				E1ECD4582875760400CD0253 /* AppDelegate.swift in Sources */,
 				E1ECD45A2875760400CD0253 /* SceneDelegate.swift in Sources */,
@@ -297,14 +312,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E1ECD45D2875760400CD0253 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E1ECD45E2875760400CD0253 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E1ECD4622875760600CD0253 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +449,6 @@
 				INFOPLIST_FILE = EmployeeManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +476,6 @@
 				INFOPLIST_FILE = EmployeeManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -602,6 +607,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E1ECD487287578CD00CD0253 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
+		E1ECD48C2875794D00CD0253 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E1ECD488287578CD00CD0253 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1ECD487287578CD00CD0253 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		E1ECD48A287578CD00CD0253 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1ECD487287578CD00CD0253 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		E1ECD48D2875794D00CD0253 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1ECD48C2875794D00CD0253 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E1ECD44C2875760400CD0253 /* Project object */;
 }
