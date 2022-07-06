@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E1ECD4582875760400CD0253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4572875760400CD0253 /* AppDelegate.swift */; };
 		E1ECD45A2875760400CD0253 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4592875760400CD0253 /* SceneDelegate.swift */; };
-		E1ECD45C2875760400CD0253 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD45B2875760400CD0253 /* ViewController.swift */; };
+		E1ECD45C2875760400CD0253 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD45B2875760400CD0253 /* SigninViewController.swift */; };
 		E1ECD4612875760600CD0253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1ECD4602875760600CD0253 /* Assets.xcassets */; };
 		E1ECD4642875760600CD0253 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1ECD4622875760600CD0253 /* LaunchScreen.storyboard */; };
 		E1ECD46F2875760600CD0253 /* EmployeeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD46E2875760600CD0253 /* EmployeeManagerTests.swift */; };
@@ -19,6 +19,11 @@
 		E1ECD48B287578CD00CD0253 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E1ECD48A287578CD00CD0253 /* RxSwift */; };
 		E1ECD48E2875794D00CD0253 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E1ECD48D2875794D00CD0253 /* SnapKit */; };
 		E1ECD49028757FD500CD0253 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD48F28757FD500CD0253 /* AppCoordinator.swift */; };
+		E1ECD49728758B2200CD0253 /* SigninCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD49628758B2200CD0253 /* SigninCoordinator.swift */; };
+		E1ECD499287599CB00CD0253 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD498287599CB00CD0253 /* SigninViewModel.swift */; };
+		E1ECD49C28759A5D00CD0253 /* TextFieldStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD49B28759A5D00CD0253 /* TextFieldStatus.swift */; };
+		E1ECD49F2875C22500CD0253 /* Reactive+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD49E2875C22500CD0253 /* Reactive+Extensions.swift */; };
+		E1ECD4A12875C2AE00CD0253 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4A02875C2AE00CD0253 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +47,7 @@
 		E1ECD4542875760400CD0253 /* EmployeeManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeeManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1ECD4572875760400CD0253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1ECD4592875760400CD0253 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E1ECD45B2875760400CD0253 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E1ECD45B2875760400CD0253 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		E1ECD4602875760600CD0253 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1ECD4632875760600CD0253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1ECD4652875760600CD0253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +57,11 @@
 		E1ECD4782875760600CD0253 /* EmployeeManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeManagerUITests.swift; sourceTree = "<group>"; };
 		E1ECD47A2875760600CD0253 /* EmployeeManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E1ECD48F28757FD500CD0253 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		E1ECD49628758B2200CD0253 /* SigninCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninCoordinator.swift; sourceTree = "<group>"; };
+		E1ECD498287599CB00CD0253 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
+		E1ECD49B28759A5D00CD0253 /* TextFieldStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStatus.swift; sourceTree = "<group>"; };
+		E1ECD49E2875C22500CD0253 /* Reactive+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+Extensions.swift"; sourceTree = "<group>"; };
+		E1ECD4A02875C2AE00CD0253 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +115,9 @@
 		E1ECD4562875760400CD0253 /* EmployeeManager */ = {
 			isa = PBXGroup;
 			children = (
+				E1ECD49D2875C21600CD0253 /* Extensions */,
+				E1ECD49A28759A4A00CD0253 /* Enums */,
+				E1ECD4652875760600CD0253 /* Info.plist */,
 				E1ECD49528758AC300CD0253 /* Views */,
 				E1ECD49428758ABC00CD0253 /* ViewModels */,
 				E1ECD49328758A8C00CD0253 /* Models */,
@@ -138,7 +151,6 @@
 				E1ECD4592875760400CD0253 /* SceneDelegate.swift */,
 				E1ECD4602875760600CD0253 /* Assets.xcassets */,
 				E1ECD4622875760600CD0253 /* LaunchScreen.storyboard */,
-				E1ECD4652875760600CD0253 /* Info.plist */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -147,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				E1ECD48F28757FD500CD0253 /* AppCoordinator.swift */,
+				E1ECD49628758B2200CD0253 /* SigninCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -161,6 +174,7 @@
 		E1ECD49428758ABC00CD0253 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E1ECD498287599CB00CD0253 /* SigninViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -168,9 +182,26 @@
 		E1ECD49528758AC300CD0253 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E1ECD45B2875760400CD0253 /* ViewController.swift */,
+				E1ECD45B2875760400CD0253 /* SigninViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E1ECD49A28759A4A00CD0253 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E1ECD49B28759A5D00CD0253 /* TextFieldStatus.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		E1ECD49D2875C21600CD0253 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1ECD49E2875C22500CD0253 /* Reactive+Extensions.swift */,
+				E1ECD4A02875C2AE00CD0253 /* String+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,8 +343,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1ECD49C28759A5D00CD0253 /* TextFieldStatus.swift in Sources */,
+				E1ECD499287599CB00CD0253 /* SigninViewModel.swift in Sources */,
+				E1ECD49728758B2200CD0253 /* SigninCoordinator.swift in Sources */,
 				E1ECD49028757FD500CD0253 /* AppCoordinator.swift in Sources */,
-				E1ECD45C2875760400CD0253 /* ViewController.swift in Sources */,
+				E1ECD4A12875C2AE00CD0253 /* String+Extensions.swift in Sources */,
+				E1ECD45C2875760400CD0253 /* SigninViewController.swift in Sources */,
+				E1ECD49F2875C22500CD0253 /* Reactive+Extensions.swift in Sources */,
 				E1ECD4582875760400CD0253 /* AppDelegate.swift in Sources */,
 				E1ECD45A2875760400CD0253 /* SceneDelegate.swift in Sources */,
 			);
