@@ -32,6 +32,7 @@
 		E1ECD4AF2875FE6F00CD0253 /* UserManagementProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4AE2875FE6F00CD0253 /* UserManagementProtocol.swift */; };
 		E1ECD4B12875FF0D00CD0253 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4B02875FF0D00CD0253 /* Constants.swift */; };
 		E1ECD4B32875FF7700CD0253 /* UserManagementServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4B22875FF7700CD0253 /* UserManagementServices.swift */; };
+		E1ECD4B628760A3A00CD0253 /* FileServicesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4B528760A3A00CD0253 /* FileServicesProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		E1ECD4AE2875FE6F00CD0253 /* UserManagementProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagementProtocol.swift; sourceTree = "<group>"; };
 		E1ECD4B02875FF0D00CD0253 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E1ECD4B22875FF7700CD0253 /* UserManagementServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagementServices.swift; sourceTree = "<group>"; };
+		E1ECD4B528760A3A00CD0253 /* FileServicesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileServicesProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,10 +231,27 @@
 		E1ECD4AD2875FE3A00CD0253 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E1ECD4B728760A4200CD0253 /* FileService */,
+				E1ECD4B428760A1200CD0253 /* Pseudo-Auth */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E1ECD4B428760A1200CD0253 /* Pseudo-Auth */ = {
+			isa = PBXGroup;
+			children = (
 				E1ECD4AE2875FE6F00CD0253 /* UserManagementProtocol.swift */,
 				E1ECD4B22875FF7700CD0253 /* UserManagementServices.swift */,
 			);
-			path = Services;
+			path = "Pseudo-Auth";
+			sourceTree = "<group>";
+		};
+		E1ECD4B728760A4200CD0253 /* FileService */ = {
+			isa = PBXGroup;
+			children = (
+				E1ECD4B528760A3A00CD0253 /* FileServicesProtocol.swift */,
+			);
+			path = FileService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +409,7 @@
 				E1ECD45C2875760400CD0253 /* SigninViewController.swift in Sources */,
 				E1ECD49F2875C22500CD0253 /* Reactive+Extensions.swift in Sources */,
 				E1ECD4B12875FF0D00CD0253 /* Constants.swift in Sources */,
+				E1ECD4B628760A3A00CD0253 /* FileServicesProtocol.swift in Sources */,
 				E1ECD4582875760400CD0253 /* AppDelegate.swift in Sources */,
 				E1ECD45A2875760400CD0253 /* SceneDelegate.swift in Sources */,
 			);
