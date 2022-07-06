@@ -24,6 +24,9 @@
 		E1ECD49C28759A5D00CD0253 /* TextFieldStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD49B28759A5D00CD0253 /* TextFieldStatus.swift */; };
 		E1ECD49F2875C22500CD0253 /* Reactive+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD49E2875C22500CD0253 /* Reactive+Extensions.swift */; };
 		E1ECD4A12875C2AE00CD0253 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4A02875C2AE00CD0253 /* String+Extensions.swift */; };
+		E1ECD4A32875C98C00CD0253 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4A22875C98C00CD0253 /* RegisterViewController.swift */; };
+		E1ECD4A52875C9DC00CD0253 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4A42875C9DC00CD0253 /* RegisterViewModel.swift */; };
+		E1ECD4A72875CAFC00CD0253 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4A62875CAFC00CD0253 /* RegisterCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		E1ECD49B28759A5D00CD0253 /* TextFieldStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStatus.swift; sourceTree = "<group>"; };
 		E1ECD49E2875C22500CD0253 /* Reactive+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+Extensions.swift"; sourceTree = "<group>"; };
 		E1ECD4A02875C2AE00CD0253 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		E1ECD4A22875C98C00CD0253 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		E1ECD4A42875C9DC00CD0253 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		E1ECD4A62875CAFC00CD0253 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,7 @@
 			children = (
 				E1ECD48F28757FD500CD0253 /* AppCoordinator.swift */,
 				E1ECD49628758B2200CD0253 /* SigninCoordinator.swift */,
+				E1ECD4A62875CAFC00CD0253 /* RegisterCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -175,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				E1ECD498287599CB00CD0253 /* SigninViewModel.swift */,
+				E1ECD4A42875C9DC00CD0253 /* RegisterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -183,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				E1ECD45B2875760400CD0253 /* SigninViewController.swift */,
+				E1ECD4A22875C98C00CD0253 /* RegisterViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -344,8 +353,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1ECD49C28759A5D00CD0253 /* TextFieldStatus.swift in Sources */,
+				E1ECD4A32875C98C00CD0253 /* RegisterViewController.swift in Sources */,
 				E1ECD499287599CB00CD0253 /* SigninViewModel.swift in Sources */,
 				E1ECD49728758B2200CD0253 /* SigninCoordinator.swift in Sources */,
+				E1ECD4A52875C9DC00CD0253 /* RegisterViewModel.swift in Sources */,
+				E1ECD4A72875CAFC00CD0253 /* RegisterCoordinator.swift in Sources */,
 				E1ECD49028757FD500CD0253 /* AppCoordinator.swift in Sources */,
 				E1ECD4A12875C2AE00CD0253 /* String+Extensions.swift in Sources */,
 				E1ECD45C2875760400CD0253 /* SigninViewController.swift in Sources */,
