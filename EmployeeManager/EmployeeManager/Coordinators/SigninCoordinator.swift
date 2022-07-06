@@ -26,7 +26,7 @@ final class SigninCoordinator: SigninCoordinatorDelegate {
     }
     
     func goToEmployeeManagementView() {
-        //
+        print("go to employee management view")
     }
     
     func goToCreateNewEmployerView() {

@@ -48,11 +48,11 @@ class RegisterViewModel: RegisterViewModelInputs, RegisterViewModelOutputs, Regi
     private var emailDidChangeProperty = PublishSubject<String>()
     private var passwordDidChangeProperty = PublishSubject<String>()
     private var verifyPassDidChangeProperty = PublishSubject<String>()
-    //private var userManager: UserManagementProtocol
+    private var userManager: UserManagementProtocol
     
     init(coordinate: RegisterCoordinatorDelegate) {
         self.coordinator = coordinate
-        //self.userManager = UserManagementService()
+        self.userManager = UserManagementServices()
         
         emailDidChangeProperty
             .map { $0.isValidEmail }
@@ -119,16 +119,16 @@ class RegisterViewModel: RegisterViewModelInputs, RegisterViewModelOutputs, Regi
             .bind(to: mismatchPasswordMessage)
             .disposed(by: disposeBag)
         
-//        userManager.isEmailAvailable
-//            .bind(to: isEmailAvailable)
-//            .disposed(by: disposeBag)
-//
-//        userManager.isSignupSuccessful
-//            .filter { $0 == true }
-//            .bind(onNext: { _ in
-//                self.goToSignin()
-//            })
-//            .disposed(by: disposeBag)
+        userManager.isEmailAvailable
+            .bind(to: isEmailAvailable)
+            .disposed(by: disposeBag)
+
+        userManager.isRegisterSuccessful
+            .filter { $0 == true }
+            .bind(onNext: { _ in
+                self.goToSignin()
+            })
+            .disposed(by: disposeBag)
     }
     
     func emailDidChange(email: String) {
@@ -150,7 +150,7 @@ class RegisterViewModel: RegisterViewModelInputs, RegisterViewModelOutputs, Regi
     }
     
     func submitRegistration(email: String, hash: String) {
-//        userManager.userSignup(email: email, hash: hash)
+        userManager.registerUser(email: email, hash: hash)
     }
     
     func goToSignin() {
@@ -158,6 +158,6 @@ class RegisterViewModel: RegisterViewModelInputs, RegisterViewModelOutputs, Regi
     }
     
     private func verifyEmailAvailability(email: String) {
-        //userManager.checkIfEmailAvailable(email: email)
+        userManager.checkIfEmailAvailable(email: email)
     }
 }

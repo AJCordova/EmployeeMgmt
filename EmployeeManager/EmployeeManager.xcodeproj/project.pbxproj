@@ -29,6 +29,9 @@
 		E1ECD4A72875CAFC00CD0253 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4A62875CAFC00CD0253 /* RegisterCoordinator.swift */; };
 		E1ECD4AA2875EFD000CD0253 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E1ECD4A92875EFD000CD0253 /* FirebaseFirestore */; };
 		E1ECD4AC2875F70400CD0253 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1ECD4AB2875F70400CD0253 /* GoogleService-Info.plist */; };
+		E1ECD4AF2875FE6F00CD0253 /* UserManagementProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4AE2875FE6F00CD0253 /* UserManagementProtocol.swift */; };
+		E1ECD4B12875FF0D00CD0253 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4B02875FF0D00CD0253 /* Constants.swift */; };
+		E1ECD4B32875FF7700CD0253 /* UserManagementServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4B22875FF7700CD0253 /* UserManagementServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		E1ECD4A42875C9DC00CD0253 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		E1ECD4A62875CAFC00CD0253 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		E1ECD4AB2875F70400CD0253 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E1ECD4AE2875FE6F00CD0253 /* UserManagementProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagementProtocol.swift; sourceTree = "<group>"; };
+		E1ECD4B02875FF0D00CD0253 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E1ECD4B22875FF7700CD0253 /* UserManagementServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagementServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,7 @@
 		E1ECD4562875760400CD0253 /* EmployeeManager */ = {
 			isa = PBXGroup;
 			children = (
+				E1ECD4AD2875FE3A00CD0253 /* Services */,
 				E1ECD49D2875C21600CD0253 /* Extensions */,
 				E1ECD49A28759A4A00CD0253 /* Enums */,
 				E1ECD4652875760600CD0253 /* Info.plist */,
@@ -162,6 +169,7 @@
 				E1ECD4592875760400CD0253 /* SceneDelegate.swift */,
 				E1ECD4602875760600CD0253 /* Assets.xcassets */,
 				E1ECD4622875760600CD0253 /* LaunchScreen.storyboard */,
+				E1ECD4B02875FF0D00CD0253 /* Constants.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -216,6 +224,15 @@
 				E1ECD4A02875C2AE00CD0253 /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E1ECD4AD2875FE3A00CD0253 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E1ECD4AE2875FE6F00CD0253 /* UserManagementProtocol.swift */,
+				E1ECD4B22875FF7700CD0253 /* UserManagementServices.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,7 +377,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1ECD4B32875FF7700CD0253 /* UserManagementServices.swift in Sources */,
 				E1ECD49C28759A5D00CD0253 /* TextFieldStatus.swift in Sources */,
+				E1ECD4AF2875FE6F00CD0253 /* UserManagementProtocol.swift in Sources */,
 				E1ECD4A32875C98C00CD0253 /* RegisterViewController.swift in Sources */,
 				E1ECD499287599CB00CD0253 /* SigninViewModel.swift in Sources */,
 				E1ECD49728758B2200CD0253 /* SigninCoordinator.swift in Sources */,
@@ -370,6 +389,7 @@
 				E1ECD4A12875C2AE00CD0253 /* String+Extensions.swift in Sources */,
 				E1ECD45C2875760400CD0253 /* SigninViewController.swift in Sources */,
 				E1ECD49F2875C22500CD0253 /* Reactive+Extensions.swift in Sources */,
+				E1ECD4B12875FF0D00CD0253 /* Constants.swift in Sources */,
 				E1ECD4582875760400CD0253 /* AppDelegate.swift in Sources */,
 				E1ECD45A2875760400CD0253 /* SceneDelegate.swift in Sources */,
 			);

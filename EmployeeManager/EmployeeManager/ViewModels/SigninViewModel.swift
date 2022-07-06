@@ -38,7 +38,7 @@ class SigninViewModel: SigninViewModelInputs, SigninViewModelOutputs, SigninView
     
     private var disposeBag = DisposeBag()
     private var coordinator: SigninCoordinatorDelegate
-    //private var userManager: UserManagementProtocol
+    private var userManager: UserManagementProtocol
 
     private var emailDidChangeProperty = PublishSubject<String>()
     private var passwordDidChangeProperty = PublishSubject<String>()
@@ -46,7 +46,7 @@ class SigninViewModel: SigninViewModelInputs, SigninViewModelOutputs, SigninView
     
     init(coordinator: SigninCoordinatorDelegate) {
         self.coordinator = coordinator
-        //self.userManager = UserManagementService()
+        self.userManager = UserManagementServices()
         
         emailDidChangeProperty
             .map { $0.isValidEmail }
@@ -82,9 +82,9 @@ class SigninViewModel: SigninViewModelInputs, SigninViewModelOutputs, SigninView
             .bind(to: invalidPasswordMessage)
             .disposed(by: disposeBag)
         
-//        userManager.isSigninValid
-//            .bind(to: shouldProceedToEvents)
-//            .disposed(by: disposeBag)
+        userManager.isSigninValid
+            .bind(to: shouldProceedToEvents)
+            .disposed(by: disposeBag)
         
         shouldProceedToEvents
             .filter { $0 == true }
@@ -103,7 +103,7 @@ class SigninViewModel: SigninViewModelInputs, SigninViewModelOutputs, SigninView
     }
     
     func signinEmployer(email name: String, password: String) {
-        
+        userManager.userSignin(email: name, hash: password)
     }
     
     func registerEmployer() {
