@@ -32,8 +32,8 @@ final class AppCoordinator: Coordinator {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
 
-        let viewController = ViewController()
-        navigationController.pushViewController(viewController, animated: true)
+        let coordinator = SigninCoordinator(navigationController: navigationController)
+        coordinate(to: coordinator)
     }
 }
 
