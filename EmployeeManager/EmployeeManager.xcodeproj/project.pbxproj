@@ -14,6 +14,8 @@
 		E1B1F1EA28772192009FCF97 /* CurrentEmployer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1F1E928772192009FCF97 /* CurrentEmployer.swift */; };
 		E1B1F1EC287725F3009FCF97 /* FileServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1F1EB287725F3009FCF97 /* FileServices.swift */; };
 		E1B1F1EE287727C5009FCF97 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1F1ED287727C5009FCF97 /* URL+Extensions.swift */; };
+		E1B1F1F1287743BE009FCF97 /* RecordsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1F1F0287743BE009FCF97 /* RecordsServiceProtocol.swift */; };
+		E1B1F1F328774439009FCF97 /* RecordsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1F1F228774439009FCF97 /* RecordsService.swift */; };
 		E1ECD4582875760400CD0253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4572875760400CD0253 /* AppDelegate.swift */; };
 		E1ECD45A2875760400CD0253 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4592875760400CD0253 /* SceneDelegate.swift */; };
 		E1ECD45C2875760400CD0253 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD45B2875760400CD0253 /* SigninViewController.swift */; };
@@ -76,6 +78,8 @@
 		E1B1F1E928772192009FCF97 /* CurrentEmployer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentEmployer.swift; sourceTree = "<group>"; };
 		E1B1F1EB287725F3009FCF97 /* FileServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileServices.swift; sourceTree = "<group>"; };
 		E1B1F1ED287727C5009FCF97 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		E1B1F1F0287743BE009FCF97 /* RecordsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsServiceProtocol.swift; sourceTree = "<group>"; };
+		E1B1F1F228774439009FCF97 /* RecordsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsService.swift; sourceTree = "<group>"; };
 		E1ECD4542875760400CD0253 /* EmployeeManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeeManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1ECD4572875760400CD0253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1ECD4592875760400CD0253 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +162,15 @@
 				6A6DE1071E8394F03DA4E967 /* Pods_EmployeeManagerTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1B1F1EF28774391009FCF97 /* RecordService */ = {
+			isa = PBXGroup;
+			children = (
+				E1B1F1F0287743BE009FCF97 /* RecordsServiceProtocol.swift */,
+				E1B1F1F228774439009FCF97 /* RecordsService.swift */,
+			);
+			path = RecordService;
 			sourceTree = "<group>";
 		};
 		E1ECD44B2875760400CD0253 = {
@@ -290,6 +303,7 @@
 		E1ECD4AD2875FE3A00CD0253 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E1B1F1EF28774391009FCF97 /* RecordService */,
 				E1ECD4B728760A4200CD0253 /* FileService */,
 				E1ECD4B428760A1200CD0253 /* Pseudo-Auth */,
 				E1B1F1E928772192009FCF97 /* CurrentEmployer.swift */,
@@ -566,6 +580,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B1F1F328774439009FCF97 /* RecordsService.swift in Sources */,
 				E1ECD4B32875FF7700CD0253 /* UserManagementServices.swift in Sources */,
 				E1ECD49C28759A5D00CD0253 /* TextFieldStatus.swift in Sources */,
 				E1ECD4AF2875FE6F00CD0253 /* UserManagementProtocol.swift in Sources */,
@@ -574,6 +589,7 @@
 				E1ECD499287599CB00CD0253 /* SigninViewModel.swift in Sources */,
 				E1ECD49728758B2200CD0253 /* SigninCoordinator.swift in Sources */,
 				E1B1F1EA28772192009FCF97 /* CurrentEmployer.swift in Sources */,
+				E1B1F1F1287743BE009FCF97 /* RecordsServiceProtocol.swift in Sources */,
 				E1ECD4A52875C9DC00CD0253 /* RegisterViewModel.swift in Sources */,
 				E1ECD4BD28760ECF00CD0253 /* Employee.swift in Sources */,
 				E1ECD4A72875CAFC00CD0253 /* RegisterCoordinator.swift in Sources */,
