@@ -95,7 +95,7 @@ struct FileServices: FileServicesProtocol {
             let data = try JSONEncoder().encode(employer)
             if let jsonString = String(data: data, encoding: .utf8) {
                 if saveToJSON(containing: jsonString, to: .Records, withName: employer.name! + ".json") {
-                    print(jsonString)
+                    // 
                 }
             }
         } catch {
@@ -103,14 +103,20 @@ struct FileServices: FileServicesProtocol {
         }
     }
     
-    func readFromJSON(file at: URL) -> String {
-        let fileContents = FileManager.default.contents(atPath: at.path)
-        let fileContentsAsString = String(bytes: fileContents!, encoding: .utf8)
+    func readFromJSON(file at: URL) -> Employer? {
+        let jsonData = FileManager.default.contents(atPath: at.path)
         
-        if let fileContentsAsString = fileContentsAsString {
-            return fileContentsAsString
+        guard let jsonData = jsonData else { return nil }
+        let employer = try! JSONDecoder().decode(Employer.self, from: jsonData)
+        return employer
+    }
+    
+    func retrieveRecords(for employer: String) {
+        var employerRecordsURL = getURL(for: .Records)
+        employerRecordsURL.appendPathComponent("\(employer).json")
+        
+        if let retrievedRecord = readFromJSON(file: employerRecordsURL) {
+            CurrentEmployer.employer = retrievedRecord
         }
-        
-        return ""
     }
 }

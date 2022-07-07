@@ -52,7 +52,7 @@ extension PersonnelViewController {
     
     private func setupEmployerBannerLabel() {
         employerBannerLabel.font = .systemFont(ofSize: 30, weight: .bold)
-        employerBannerLabel.text = "Employee List"// viewModel.outputs.employer.name
+        employerBannerLabel.text = viewModel.outputs.employer.name
         view.addSubview(employerBannerLabel)
 
         employerBannerLabel.snp.makeConstraints { make in
@@ -120,7 +120,7 @@ extension PersonnelViewController {
         
         addEmployeeButton.rx.tap
             .bind {
-                print("Add employee tapped")
+                print("add employee tapped")
             }
             .disposed(by: disposeBag)
         
