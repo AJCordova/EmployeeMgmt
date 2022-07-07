@@ -8,5 +8,5 @@
 import Foundation
 
 struct CurrentEmployer {
-    var employer = SampleData.employerSample //Employer() // Empty Employer object
+    static var employer = Employer(name: "SCP")
 }
