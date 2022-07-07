@@ -11,6 +11,9 @@
 		9BF273F3D7385576B02FDC11 /* Pods_EmployeeManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6DE1071E8394F03DA4E967 /* Pods_EmployeeManagerTests.framework */; };
 		E1B1F1A82876FE52009FCF97 /* PersonnelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1F1A72876FE52009FCF97 /* PersonnelViewController.swift */; };
 		E1B1F1E828770839009FCF97 /* PersonnelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1F1E728770839009FCF97 /* PersonnelViewModel.swift */; };
+		E1B1F1EA28772192009FCF97 /* CurrentEmployer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1F1E928772192009FCF97 /* CurrentEmployer.swift */; };
+		E1B1F1EC287725F3009FCF97 /* FileServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1F1EB287725F3009FCF97 /* FileServices.swift */; };
+		E1B1F1EE287727C5009FCF97 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1F1ED287727C5009FCF97 /* URL+Extensions.swift */; };
 		E1ECD4582875760400CD0253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4572875760400CD0253 /* AppDelegate.swift */; };
 		E1ECD45A2875760400CD0253 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4592875760400CD0253 /* SceneDelegate.swift */; };
 		E1ECD45C2875760400CD0253 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD45B2875760400CD0253 /* SigninViewController.swift */; };
@@ -70,6 +73,9 @@
 		DD295921464C4D99C9B6C1F8 /* Pods-EmployeeManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmployeeManager.release.xcconfig"; path = "Target Support Files/Pods-EmployeeManager/Pods-EmployeeManager.release.xcconfig"; sourceTree = "<group>"; };
 		E1B1F1A72876FE52009FCF97 /* PersonnelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnelViewController.swift; sourceTree = "<group>"; };
 		E1B1F1E728770839009FCF97 /* PersonnelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnelViewModel.swift; sourceTree = "<group>"; };
+		E1B1F1E928772192009FCF97 /* CurrentEmployer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentEmployer.swift; sourceTree = "<group>"; };
+		E1B1F1EB287725F3009FCF97 /* FileServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileServices.swift; sourceTree = "<group>"; };
+		E1B1F1ED287727C5009FCF97 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		E1ECD4542875760400CD0253 /* EmployeeManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeeManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1ECD4572875760400CD0253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1ECD4592875760400CD0253 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -276,6 +282,7 @@
 			children = (
 				E1ECD49E2875C22500CD0253 /* Reactive+Extensions.swift */,
 				E1ECD4A02875C2AE00CD0253 /* String+Extensions.swift */,
+				E1B1F1ED287727C5009FCF97 /* URL+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -285,6 +292,7 @@
 			children = (
 				E1ECD4B728760A4200CD0253 /* FileService */,
 				E1ECD4B428760A1200CD0253 /* Pseudo-Auth */,
+				E1B1F1E928772192009FCF97 /* CurrentEmployer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -302,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				E1ECD4B528760A3A00CD0253 /* FileServicesProtocol.swift */,
+				E1B1F1EB287725F3009FCF97 /* FileServices.swift */,
 			);
 			path = FileService;
 			sourceTree = "<group>";
@@ -564,6 +573,7 @@
 				E1B1F1A82876FE52009FCF97 /* PersonnelViewController.swift in Sources */,
 				E1ECD499287599CB00CD0253 /* SigninViewModel.swift in Sources */,
 				E1ECD49728758B2200CD0253 /* SigninCoordinator.swift in Sources */,
+				E1B1F1EA28772192009FCF97 /* CurrentEmployer.swift in Sources */,
 				E1ECD4A52875C9DC00CD0253 /* RegisterViewModel.swift in Sources */,
 				E1ECD4BD28760ECF00CD0253 /* Employee.swift in Sources */,
 				E1ECD4A72875CAFC00CD0253 /* RegisterCoordinator.swift in Sources */,
@@ -573,6 +583,8 @@
 				E1ECD49F2875C22500CD0253 /* Reactive+Extensions.swift in Sources */,
 				E1ECD4B12875FF0D00CD0253 /* Constants.swift in Sources */,
 				E1ECD4C12876722500CD0253 /* PersonnelCoordinator.swift in Sources */,
+				E1B1F1EE287727C5009FCF97 /* URL+Extensions.swift in Sources */,
+				E1B1F1EC287725F3009FCF97 /* FileServices.swift in Sources */,
 				E1ECD4C52876887600CD0253 /* EmployeeTableViewCell.swift in Sources */,
 				E1B1F1E828770839009FCF97 /* PersonnelViewModel.swift in Sources */,
 				E1ECD4B628760A3A00CD0253 /* FileServicesProtocol.swift in Sources */,
