@@ -11,4 +11,5 @@ struct Employee: Codable, Equatable {
     var id: UUID = UUID()
     var name: String
     var isEmployed: Bool
+    var department: String
 }
