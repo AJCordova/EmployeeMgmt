@@ -21,8 +21,8 @@ final class PersonnelCoordinator: PersonnelCoordinatorDelegate {
     }
     
     func start() {
-//        let viewModel = PersonnelViewModel(coordinator: self)
-        let viewController = PersonnelViewController()
+        let viewModel = PersonnelViewModel(coordinator: self)
+        let viewController = PersonnelViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)
     }
     

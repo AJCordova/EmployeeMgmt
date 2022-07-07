@@ -18,6 +18,16 @@ class PersonnelViewController: UIViewController {
     lazy var logoutButton: UIButton = UIButton()
     
     private let disposeBag = DisposeBag()
+    private var viewModel: PersonnelViewModelTypes
+    
+    init(viewModel: PersonnelViewModelTypes) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func loadView() {
         super.loadView()
@@ -68,13 +78,15 @@ extension PersonnelViewController {
     
     private func setupEmployeeTableView() {
         tableView.register(UINib(nibName: "EmployeeTableViewCell", bundle: nil), forCellReuseIdentifier: "EmployeeTableViewCell")
-        tableView.backgroundColor = .systemYellow
+        tableView.separatorInset = .zero
+        tableView.separatorStyle = .none
+        
         view.addSubview(tableView)
         
         tableView.snp.makeConstraints { make in
-            make.top.equalTo(employerBannerLabel.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview()
-            make.height.equalTo(580)
+            make.top.equalTo(employerBannerLabel.snp.bottom).offset(50)
+            make.width.equalToSuperview()
+            make.height.equalTo(500)
         }
     }
     
@@ -94,6 +106,18 @@ extension PersonnelViewController {
 extension PersonnelViewController {
     func setupBindings() {
         
+        viewModel.outputs.employees.asObservable()
+            .bind(to: tableView.rx.items) { (tableView, row, employee) -> UITableViewCell in
+                let cell: EmployeeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EmployeeTableViewCell") as! EmployeeTableViewCell
+                
+                cell.statusIndicator.backgroundColor = employee.isEmployed == true ? .systemGreen : .systemRed
+                cell.nameLabel.text = employee.name
+                cell.nameLabel.textColor = employee.isEmployed == true ? .black : .systemGray
+                
+                return cell
+            }
+            .disposed(by: disposeBag)
+        
         addEmployeeButton.rx.tap
             .bind {
                 print("Add employee tapped")
@@ -105,6 +129,7 @@ extension PersonnelViewController {
                 print("logout tapped")
             }
             .disposed(by: disposeBag)
-        
     }
 }
+
+
