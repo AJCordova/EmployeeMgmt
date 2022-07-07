@@ -11,6 +11,7 @@ import UIKit
 protocol PersonnelCoordinatorDelegate: Coordinator {
     func addEmployee(action: RecordEditAction, service: RecordsServiceProtocol)
     func editEmployee(action: RecordEditAction,  employee: Employee, service: RecordsServiceProtocol)
+    func goToSign()
 }
 
 final class PersonnelCoordinator: PersonnelCoordinatorDelegate {
@@ -32,5 +33,10 @@ final class PersonnelCoordinator: PersonnelCoordinatorDelegate {
     
     func editEmployee(action: RecordEditAction, employee: Employee, service: RecordsServiceProtocol) {
         navigationController.present(EditRecordViewController(action: action, employee: employee, service: service), animated: true, completion: nil)
+    }
+    
+    func goToSign() {
+        let coordinator = SigninCoordinator(navigationController: navigationController)
+        coordinate(to: coordinator)
     }
 }

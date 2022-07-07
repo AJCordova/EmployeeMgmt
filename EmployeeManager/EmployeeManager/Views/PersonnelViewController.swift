@@ -132,7 +132,7 @@ extension PersonnelViewController {
         
         logoutButton.rx.tap
             .bind {
-                print("logout tapped")
+                self.viewModel.inputs.logout()
             }
             .disposed(by: disposeBag)
     }

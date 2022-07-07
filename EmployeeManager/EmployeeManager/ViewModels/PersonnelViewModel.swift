@@ -55,7 +55,10 @@ class PersonnelViewModel: PersonnelViewModelTypes, PersonnelViewModelInputs, Per
             .disposed(by: disposeBag)
     }
     
-    func logout() { }
+    func logout() {
+        CurrentEmployer.employer = Employer()
+        coordinator.goToSign()
+    }
     
     func addEmployee() {
         coordinator.addEmployee(action: .add, service: recordServices)
