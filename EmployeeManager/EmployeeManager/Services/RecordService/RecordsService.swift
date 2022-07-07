@@ -13,10 +13,8 @@ struct RecordsService: RecordsServiceProtocol {
     var areChangesSaved = PublishRelay<Bool>()
     
     func add(employee: Employee) {
-        guard var employees = CurrentEmployer.employer.employees else { return }
-        employees.append(employee)
+        CurrentEmployer.employer.employees?.append(employee)
         
-        CurrentEmployer.employer.employees = employees
         let fileService = FileServices()
         fileService.saveToJSON(employer: CurrentEmployer.employer)
         

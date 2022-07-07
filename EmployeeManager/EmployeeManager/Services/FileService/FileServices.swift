@@ -58,6 +58,7 @@ struct FileServices: FileServicesProtocol {
             if savedUsers.contains(name) {
                 return true
             } else {
+                saveToJSON(employer: CurrentEmployer.employer)
                 return false
             }
         }
@@ -95,7 +96,7 @@ struct FileServices: FileServicesProtocol {
             let data = try JSONEncoder().encode(employer)
             if let jsonString = String(data: data, encoding: .utf8) {
                 if saveToJSON(containing: jsonString, to: .Records, withName: employer.name! + ".json") {
-                    // 
+                   print("saved")
                 }
             }
         } catch {

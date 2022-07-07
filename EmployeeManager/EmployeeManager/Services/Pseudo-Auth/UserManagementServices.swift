@@ -30,6 +30,7 @@ extension UserManagementServices {
                     guard let document = snapshot?.documents.first else { return }
                     let data = document.data()
                     if hash.elementsEqual((data["password"] as? String)!) {
+                        setCurrentUser(email: email)
                         self.isSigninValid.accept(true)
                     } else {
                         self.isSigninValid.accept(false)
@@ -69,5 +70,15 @@ extension UserManagementServices {
                 }
             }
         }
+    }
+    
+    private func setCurrentUser(email: String) {
+        let delimiter = "@"
+        let newstr = email
+        let token = newstr.components(separatedBy: delimiter)
+        let name = token[0]
+        print(name)
+        
+        CurrentEmployer.employer = Employer(name: name, employees: [])
     }
 }

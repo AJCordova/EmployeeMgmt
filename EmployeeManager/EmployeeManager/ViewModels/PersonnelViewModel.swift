@@ -49,7 +49,7 @@ class PersonnelViewModel: PersonnelViewModelTypes, PersonnelViewModelInputs, Per
             .filter { $0 == true }
             .bind(onNext: { _ in
                 DispatchQueue.main.async {
-                    self.loadEmployees()
+                    self.retrieveEmployeeList()
                 }
             })
             .disposed(by: disposeBag)
@@ -73,6 +73,9 @@ class PersonnelViewModel: PersonnelViewModelTypes, PersonnelViewModelInputs, Per
     private func retrieveEmployeeList() {
         if fileServices.doesEmployerFileExist(name: employer.name!) {
             fileServices.retrieveRecords(for: employer.name!)
+        } else {
+            fileServices.createRecordsDirectory()
+            
         }
         
         DispatchQueue.main.async {

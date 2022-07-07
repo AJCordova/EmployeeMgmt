@@ -8,5 +8,5 @@
 import Foundation
 
 struct CurrentEmployer {
-    static var employer = Employer(name: "SCP")
+    static var employer = Employer()
 }
