@@ -26,7 +26,8 @@ final class SigninCoordinator: SigninCoordinatorDelegate {
     }
     
     func goToEmployeeManagementView() {
-        print("go to employee management view")
+        let coordinator = PersonnelCoordinator(navigationController: navigationController)
+        coordinate(to: coordinator)
     }
     
     func goToCreateNewEmployerView() {
