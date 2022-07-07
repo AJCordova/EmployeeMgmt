@@ -16,7 +16,6 @@ protocol PersonnelViewModelInputs {
 
 protocol PersonnelViewModelOutputs {
     func loadEmployees()
-    var employees: PublishSubject<[String]> { get }
 }
 
 protocol PersonnelViewModelTypes {
@@ -28,19 +27,20 @@ class PersonnelViewModel: PersonnelViewModelTypes, PersonnelViewModelInputs, Per
     var inputs: PersonnelViewModelInputs { return self }
     var outputs: PersonnelViewModelOutputs { return self }
     
-    var employees: PublishSubject<[String]> = PublishSubject<[String]>()
-    
     private let disposeBag = DisposeBag()
     private let coordinator: PersonnelCoordinatorDelegate
     
     init(coordinator: PersonnelCoordinatorDelegate) {
         self.coordinator = coordinator
-        
+        loadEmployees()
     }
     
     func logout() { }
+    
     func addEmployee() { }
+    
     func setTargetEmployee() { }
     
-    func loadEmployees() { }
+    func loadEmployees() {
+    }
 }

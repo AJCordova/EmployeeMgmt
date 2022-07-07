@@ -17,12 +17,10 @@ class PersonnelViewController: UIViewController {
     lazy var addEmployeeButton: UIButton = UIButton()
     
     private let disposeBag = DisposeBag()
-    private let viewModel: PersonnelViewModelTypes
-    private var data: PublishSubject<[Employee]> = PublishSubject<[Employee]>()
+    private var viewModel: PersonnelViewModelTypes
     
     init(viewModel: PersonnelViewModelTypes) {
         self.viewModel = viewModel
-        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -32,13 +30,13 @@ class PersonnelViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
+        self.navigationItem.setHidesBackButton(true, animated: true)
+        view.backgroundColor = .systemBackground
         setupViews()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.setHidesBackButton(true, animated: true)
-        view.backgroundColor = .systemBackground
         setupBindings()
     }
 }
@@ -53,7 +51,6 @@ extension PersonnelViewController {
     
     private func setupEmployerBannerLabel() {
         employerBannerLabel.font = .systemFont(ofSize: 30, weight: .bold)
-        employerBannerLabel.text = "Your Employees"
         view.addSubview(employerBannerLabel)
 
         employerBannerLabel.snp.makeConstraints { make in
@@ -79,15 +76,13 @@ extension PersonnelViewController {
     
     private func setupEmployeeTableView() {
         tableView.register(UINib(nibName: "EmployeeTableViewCell", bundle: nil), forCellReuseIdentifier: "EmployeeTableViewCell")
-        tableView.separatorInset = .zero
-        tableView.separatorStyle = .none
-
+        tableView.backgroundColor = .systemYellow
         view.addSubview(tableView)
         
         tableView.snp.makeConstraints { make in
-            make.top.equalTo(employerBannerLabel.snp.bottom).offset(50)
-            make.width.equalToSuperview()
-            make.height.equalTo(540)
+            make.top.equalTo(employerBannerLabel.snp.bottom).offset(20)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(580)
         }
     }
     
@@ -105,36 +100,7 @@ extension PersonnelViewController {
 }
 
 extension PersonnelViewController {
-    func setupBindings() {
-        addEmployeeButton.rx.tap
-            .bind {
-                print("add button tapped")
-            }
-            .disposed(by: disposeBag)
-        
-        logoutButton.rx.tap
-            .bind {
-                print("logout button tapped ")
-            }
-            .disposed(by: disposeBag)
-
-        
-        tableView.rx.modelSelected(Employee.self)
-            .subscribe(onNext: { task in
-                print("employee selected")
-            })
-            .disposed(by: disposeBag)
-        
-        data.asObservable()
-            .bind(to: tableView.rx.items) { (tableView, row, employee) -> UITableViewCell in
-                let cell: EmployeeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EmployeeTableViewCell") as! EmployeeTableViewCell
-                cell.statusIndicator.backgroundColor = employee.isEmployed == true ? .systemGreen : .systemRed
-                cell.nameLabel.text = employee.name
-                cell.nameLabel.textColor = employee.isEmployed == true ? .black : .systemGray
-                return cell
-            }
-            .disposed(by: disposeBag)
-    }
+    func setupBindings() {}
 }
 
 
