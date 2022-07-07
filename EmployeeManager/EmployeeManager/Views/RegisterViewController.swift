@@ -11,8 +11,6 @@ import RxSwift
 
 class RegisterViewController: UIViewController {
     
-    private var viewModel: RegisterViewModelTypes
-    
     lazy var emailTextField: UITextField = UITextField()
     lazy var emailErrorLabel: UILabel = UILabel()
     lazy var passwordTextField: UITextField = UITextField()
@@ -21,7 +19,9 @@ class RegisterViewController: UIViewController {
     lazy var confirmErrorLabel: UILabel = UILabel()
     lazy var registerButton: UIButton = UIButton()
     lazy var signinButton: UIButton = UIButton()
-    lazy var disposeBag = DisposeBag()
+    
+    private var viewModel: RegisterViewModelTypes
+    private let disposeBag = DisposeBag()
     
     init(viewModel: RegisterViewModelTypes) {
         self.viewModel = viewModel
