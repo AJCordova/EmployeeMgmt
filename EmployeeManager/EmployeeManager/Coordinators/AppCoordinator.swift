@@ -32,7 +32,8 @@ final class AppCoordinator: Coordinator {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
 
-        let coordinator = SigninCoordinator(navigationController: navigationController)
+        //let coordinator = SigninCoordinator(navigationController: navigationController)
+        let coordinator = PersonnelCoordinator(navigationController: navigationController)
         coordinate(to: coordinator)
     }
 }
