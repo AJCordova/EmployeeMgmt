@@ -80,7 +80,6 @@ extension PersonnelViewController {
         tableView.register(UINib(nibName: "EmployeeTableViewCell", bundle: nil), forCellReuseIdentifier: "EmployeeTableViewCell")
         tableView.separatorInset = .zero
         tableView.separatorStyle = .none
-        
         view.addSubview(tableView)
         
         tableView.snp.makeConstraints { make in
@@ -113,6 +112,7 @@ extension PersonnelViewController {
                 cell.statusIndicator.backgroundColor = employee.isEmployed == true ? .systemGreen : .systemRed
                 cell.nameLabel.text = employee.name
                 cell.nameLabel.textColor = employee.isEmployed == true ? .black : .systemGray
+                cell.selectionStyle = .none
                 
                 return cell
             }
