@@ -94,7 +94,7 @@ extension EditRecordViewController {
     }
     
     private func setupNameLabel() {
-        nameLabel.text = "Title: "
+        nameLabel.text = "Employee Name: "
         nameLabel.font = .systemFont(ofSize: 20)
         view.addSubview(nameLabel)
         
@@ -119,7 +119,7 @@ extension EditRecordViewController {
     }
     
     private func setupDepartmentLabel() {
-        departmentLabel.text = "Detail: "
+        departmentLabel.text = "Department: "
         departmentLabel.font = .systemFont(ofSize: 20)
         view.addSubview(departmentLabel)
         
@@ -140,7 +140,7 @@ extension EditRecordViewController {
         departmentTextField.snp.makeConstraints { make in
             make.top.equalTo(departmentLabel.snp.bottom).offset(10)
             make.left.right.equalToSuperview().inset(25)
-            make.height.equalTo(350)
+            make.height.equalTo(30)
         }
     }
     
@@ -158,7 +158,7 @@ extension EditRecordViewController {
     
     private func setupSaveButton() {
         saveButton.backgroundColor = .systemGreen
-        saveButton.setTitle("Save Button", for: .normal)
+        saveButton.setTitle("Save", for: .normal)
         saveButton.layer.cornerRadius = 9.0
         view.addSubview(saveButton)
         
