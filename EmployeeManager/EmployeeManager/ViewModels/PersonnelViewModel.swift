@@ -78,7 +78,6 @@ class PersonnelViewModel: PersonnelViewModelTypes, PersonnelViewModelInputs, Per
             fileServices.retrieveRecords(for: employer.name!)
         } else {
             fileServices.createRecordsDirectory()
-            
         }
         
         DispatchQueue.main.async {
