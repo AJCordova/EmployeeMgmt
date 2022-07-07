@@ -11,3 +11,8 @@ struct Constants {
     static let collectionReference = "Employers"
     static let fieldReference = "email"
 }
+
+enum AppDirectories: String {
+    case Documents = "Documents"
+    case Records = "EmployeeRecords"
+}
