@@ -12,7 +12,7 @@ import RxRelay
 protocol PersonnelViewModelInputs {
     func logout()
     func addEmployee()
-    func setTargetEmployee()
+    func editEmployee(employee: Employee)
 }
 
 protocol PersonnelViewModelOutputs {
@@ -34,24 +34,49 @@ class PersonnelViewModel: PersonnelViewModelTypes, PersonnelViewModelInputs, Per
     
     private let disposeBag = DisposeBag()
     private let coordinator: PersonnelCoordinatorDelegate
+    private let fileServices: FileServicesProtocol
+    private let recordServices: RecordsServiceProtocol
     
     init(coordinator: PersonnelCoordinatorDelegate) {
         self.coordinator = coordinator
-        self.employer = SampleData.employerSample
+        self.employer = CurrentEmployer.employer
+        self.fileServices = FileServices()
+        self.recordServices = RecordsService()
         
-        DispatchQueue.main.async {
-            self.loadEmployees()
-        }
+        self.retrieveEmployeeList()
+        
+        recordServices.areChangesSaved
+            .filter { $0 == true }
+            .bind(onNext: { _ in
+                DispatchQueue.main.async {
+                    self.loadEmployees()
+                }
+            })
+            .disposed(by: disposeBag)
     }
     
     func logout() { }
     
-    func addEmployee() { }
+    func addEmployee() {
+        coordinator.addEmployee(action: .add, service: recordServices)
+    }
     
-    func setTargetEmployee() { }
+    func editEmployee(employee: Employee) {
+        coordinator.editEmployee(action: .edit, employee: employee, service: recordServices)
+    }
     
     func loadEmployees() {
-        guard let employeeList = employer.employees else { return }
+        guard let employeeList = CurrentEmployer.employer.employees else { return }
         employees.onNext(employeeList)
+    }
+    
+    private func retrieveEmployeeList() {
+        if fileServices.doesEmployerFileExist(name: employer.name!) {
+            fileServices.retrieveRecords(for: employer.name!)
+        }
+        
+        DispatchQueue.main.async {
+            self.loadEmployees()
+        }
     }
 }

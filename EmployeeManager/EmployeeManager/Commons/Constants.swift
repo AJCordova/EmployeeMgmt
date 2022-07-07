@@ -16,3 +16,7 @@ enum AppDirectories: String {
     case Documents = "Documents"
     case Records = "EmployeeRecords"
 }
+
+enum RecordEditAction {
+    case add, edit
+}

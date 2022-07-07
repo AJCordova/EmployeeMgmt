@@ -6,9 +6,12 @@
 //
 
 import Foundation
+import RxCocoa
 
 protocol RecordsServiceProtocol {
     func add(employee: Employee)
     func edit(employee: Employee)
     func delete(employee: Employee)
+    
+    var areChangesSaved: PublishRelay<Bool> { get }
 }

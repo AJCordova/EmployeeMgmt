@@ -118,9 +118,15 @@ extension PersonnelViewController {
             }
             .disposed(by: disposeBag)
         
+        tableView.rx.modelSelected(Employee.self)
+            .subscribe(onNext: { employee in
+                self.viewModel.inputs.editEmployee(employee: employee)
+            })
+            .disposed(by: disposeBag)
+        
         addEmployeeButton.rx.tap
             .bind {
-                print("add employee tapped")
+                self.viewModel.inputs.addEmployee()
             }
             .disposed(by: disposeBag)
         

@@ -16,6 +16,7 @@
 		E1B1F1EE287727C5009FCF97 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1F1ED287727C5009FCF97 /* URL+Extensions.swift */; };
 		E1B1F1F1287743BE009FCF97 /* RecordsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1F1F0287743BE009FCF97 /* RecordsServiceProtocol.swift */; };
 		E1B1F1F328774439009FCF97 /* RecordsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1F1F228774439009FCF97 /* RecordsService.swift */; };
+		E1B1F1F628775109009FCF97 /* EditRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1F1F528775109009FCF97 /* EditRecordViewController.swift */; };
 		E1ECD4582875760400CD0253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4572875760400CD0253 /* AppDelegate.swift */; };
 		E1ECD45A2875760400CD0253 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD4592875760400CD0253 /* SceneDelegate.swift */; };
 		E1ECD45C2875760400CD0253 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ECD45B2875760400CD0253 /* SigninViewController.swift */; };
@@ -80,6 +81,7 @@
 		E1B1F1ED287727C5009FCF97 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		E1B1F1F0287743BE009FCF97 /* RecordsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsServiceProtocol.swift; sourceTree = "<group>"; };
 		E1B1F1F228774439009FCF97 /* RecordsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsService.swift; sourceTree = "<group>"; };
+		E1B1F1F528775109009FCF97 /* EditRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRecordViewController.swift; sourceTree = "<group>"; };
 		E1ECD4542875760400CD0253 /* EmployeeManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeeManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1ECD4572875760400CD0253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1ECD4592875760400CD0253 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +173,14 @@
 				E1B1F1F228774439009FCF97 /* RecordsService.swift */,
 			);
 			path = RecordService;
+			sourceTree = "<group>";
+		};
+		E1B1F1F4287750E3009FCF97 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				E1B1F1F528775109009FCF97 /* EditRecordViewController.swift */,
+			);
+			path = Modals;
 			sourceTree = "<group>";
 		};
 		E1ECD44B2875760400CD0253 = {
@@ -274,6 +284,7 @@
 		E1ECD49528758AC300CD0253 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E1B1F1F4287750E3009FCF97 /* Modals */,
 				E1ECD4C22876885D00CD0253 /* ComponentViews */,
 				E1ECD45B2875760400CD0253 /* SigninViewController.swift */,
 				E1ECD4A22875C98C00CD0253 /* RegisterViewController.swift */,
@@ -585,6 +596,7 @@
 				E1ECD49C28759A5D00CD0253 /* TextFieldStatus.swift in Sources */,
 				E1ECD4AF2875FE6F00CD0253 /* UserManagementProtocol.swift in Sources */,
 				E1ECD4A32875C98C00CD0253 /* RegisterViewController.swift in Sources */,
+				E1B1F1F628775109009FCF97 /* EditRecordViewController.swift in Sources */,
 				E1B1F1A82876FE52009FCF97 /* PersonnelViewController.swift in Sources */,
 				E1ECD499287599CB00CD0253 /* SigninViewModel.swift in Sources */,
 				E1ECD49728758B2200CD0253 /* SigninCoordinator.swift in Sources */,

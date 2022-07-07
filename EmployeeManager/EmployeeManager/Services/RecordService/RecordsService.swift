@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import RxCocoa
 
 struct RecordsService: RecordsServiceProtocol {
+    
+    var areChangesSaved = PublishRelay<Bool>()
     
     func add(employee: Employee) {
         guard var employees = CurrentEmployer.employer.employees else { return }
@@ -17,7 +20,7 @@ struct RecordsService: RecordsServiceProtocol {
         let fileService = FileServices()
         fileService.saveToJSON(employer: CurrentEmployer.employer)
         
-        // emit to reload from JSON
+        self.areChangesSaved.accept(true)
     }
     
     func edit(employee: Employee) {
@@ -28,7 +31,7 @@ struct RecordsService: RecordsServiceProtocol {
         let fileService = FileServices()
         fileService.saveToJSON(employer: CurrentEmployer.employer)
         
-        // emit to reload from JSON
+        self.areChangesSaved.accept(true)
     }
     
     func delete(employee: Employee) {
@@ -39,8 +42,6 @@ struct RecordsService: RecordsServiceProtocol {
         let fileService = FileServices()
         fileService.saveToJSON(employer: CurrentEmployer.employer)
         
-        // emit to reload from JSON
+        self.areChangesSaved.accept(true)
     }
-    
-    
 }

@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 protocol PersonnelCoordinatorDelegate: Coordinator {
-    func addEmployee()
-    func editEmployee()
+    func addEmployee(action: RecordEditAction, service: RecordsServiceProtocol)
+    func editEmployee(action: RecordEditAction,  employee: Employee, service: RecordsServiceProtocol)
 }
 
 final class PersonnelCoordinator: PersonnelCoordinatorDelegate {
@@ -26,6 +26,11 @@ final class PersonnelCoordinator: PersonnelCoordinatorDelegate {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func addEmployee() {}
-    func editEmployee() {}
+    func addEmployee(action: RecordEditAction, service: RecordsServiceProtocol) {
+        navigationController.present(EditRecordViewController(action: action, employee: nil, service: service), animated: true, completion: nil)
+    }
+    
+    func editEmployee(action: RecordEditAction, employee: Employee, service: RecordsServiceProtocol) {
+        navigationController.present(EditRecordViewController(action: action, employee: employee, service: service), animated: true, completion: nil)
+    }
 }
