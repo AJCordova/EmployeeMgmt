@@ -88,7 +88,7 @@ class SigninViewModel: SigninViewModelInputs, SigninViewModelOutputs, SigninView
         
         shouldProceedToEvents
             .filter { $0 == true }
-            .bind(onNext: { _ in
+            .bind(onNext: { [unowned self] _ in
                 self.coordinator.goToEmployeeManagementView()
             })
             .disposed(by: disposeBag)

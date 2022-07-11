@@ -47,7 +47,7 @@ class PersonnelViewModel: PersonnelViewModelTypes, PersonnelViewModelInputs, Per
         
         recordServices.areChangesSaved
             .filter { $0 == true }
-            .bind(onNext: { _ in
+            .bind(onNext: { [unowned self]_ in
                 DispatchQueue.main.async {
                     self.retrieveEmployeeList()
                 }
@@ -57,7 +57,7 @@ class PersonnelViewModel: PersonnelViewModelTypes, PersonnelViewModelInputs, Per
     
     func logout() {
         CurrentEmployer.employer = Employer()
-        coordinator.goToSign()
+        coordinator.goToSignin()
     }
     
     func addEmployee() {

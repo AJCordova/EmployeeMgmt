@@ -152,12 +152,12 @@ extension SigninViewController {
             .bind(onNext: viewModel.inputs.passwordDidChange(password:))
             .disposed(by: disposeBag)
         
-        signinButton.rx.tap.bind {
+        signinButton.rx.tap.bind { [unowned self] _ in
             self.viewModel.inputs.signinEmployer(email: self.emailTextField.text!, password: self.passwordTextField.text!.base64Encoded()!)
         }
         .disposed(by: disposeBag)
         
-        registerButton.rx.tap.bind {
+        registerButton.rx.tap.bind { [unowned self] _ in
             self.viewModel.inputs.registerEmployer()
         }
         .disposed(by: disposeBag)

@@ -125,13 +125,13 @@ extension PersonnelViewController {
             .disposed(by: disposeBag)
         
         addEmployeeButton.rx.tap
-            .bind {
+            .bind { [unowned self] _ in
                 self.viewModel.inputs.addEmployee()
             }
             .disposed(by: disposeBag)
         
         logoutButton.rx.tap
-            .bind {
+            .bind { [unowned self] _ in
                 self.viewModel.inputs.logout()
             }
             .disposed(by: disposeBag)

@@ -38,6 +38,10 @@ class EditRecordViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        print("deinit")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -180,7 +184,7 @@ extension EditRecordViewController {
             .disposed(by: disposeBag)
         
         saveButton.rx.tap
-            .bind {
+            .bind { [unowned self] _ in
                 guard let name = self.nameTextField.text else { return }
 
                 switch self.action {
@@ -188,8 +192,7 @@ extension EditRecordViewController {
                     self.service.add(employee: Employee(name: name,
                                                    isEmployed: true,
                                                    department: self.departmentTextField.text ?? ""))
-        
-                    self.dismiss(animated: true)
+
                 case .edit:
                     guard var employee = self.employee else { return }
                     employee.name = name
@@ -202,7 +205,7 @@ extension EditRecordViewController {
             .disposed(by: disposeBag)
         
         toggleStatusButton.rx.tap
-            .bind {
+            .bind { [unowned self] _ in
                 guard var employee = self.employee else { return }
                 employee.isEmployed.toggle()
                 
@@ -215,7 +218,7 @@ extension EditRecordViewController {
             .disposed(by: disposeBag)
         
         deleteButton.rx.tap
-            .bind {
+            .bind { [unowned self] _ in
                 guard let employee = self.employee else { return }
                 self.service.delete(employee: employee)
                 self.dismiss(animated: true)
@@ -223,7 +226,7 @@ extension EditRecordViewController {
             .disposed(by: disposeBag)
         
         cancelButton.rx.tap
-            .bind {
+            .bind { [unowned self] _ in
                 self.dismiss(animated: true)
             }
             .disposed(by: disposeBag)

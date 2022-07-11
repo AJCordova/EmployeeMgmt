@@ -184,7 +184,7 @@ extension RegisterViewController {
             .disposed(by: disposeBag)
         
         confirmPasswordTextField.rx.text.orEmpty.distinctUntilChanged()
-            .bind(onNext: { userInput in
+            .bind(onNext: { [unowned self] userInput in
                 guard let passwordInput = self.passwordTextField.text else { return }
                 if passwordInput.isEmpty {
                     return
@@ -195,12 +195,12 @@ extension RegisterViewController {
             })
             .disposed(by: disposeBag)
         
-        signinButton.rx.tap.bind {
+        signinButton.rx.tap.bind { [unowned self] _ in
             self.viewModel.inputs.goToSignin()
         }
         .disposed(by: disposeBag)
         
-        registerButton.rx.tap.bind { [self] in
+        registerButton.rx.tap.bind { [unowned self] in
             viewModel.inputs.submitRegistration(email: self.emailTextField.text!, hash: self.passwordTextField.text!.base64Encoded()!)
         }
         .disposed(by: disposeBag)

@@ -61,7 +61,7 @@ class RegisterViewModel: RegisterViewModelInputs, RegisterViewModelOutputs, Regi
         
         emailDidChangeProperty
             .filter { $0.isValidEmail.isValid }
-            .bind(onNext: { email in
+            .bind(onNext: { [unowned self] email in
                 self.verifyEmailAvailability(email: email)
             })
             .disposed(by: disposeBag)
