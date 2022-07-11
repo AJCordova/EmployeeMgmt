@@ -30,6 +30,10 @@ class SigninViewController: UIViewController {
         fatalError("init(coder: ) has not been implemented")
     }
     
+    deinit {
+        print("Sign in deinit")
+    }
+    
     override func loadView() {
         super.loadView()
         view.backgroundColor = .systemBackground

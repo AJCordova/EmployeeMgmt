@@ -119,7 +119,7 @@ extension PersonnelViewController {
             .disposed(by: disposeBag)
         
         tableView.rx.modelSelected(Employee.self)
-            .subscribe(onNext: { employee in
+            .subscribe(onNext: { [unowned self] employee in
                 self.viewModel.inputs.editEmployee(employee: employee)
             })
             .disposed(by: disposeBag)
